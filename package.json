@@ -1,0 +1,40 @@
+{
+  "name": "lemon",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc",
+    "dev": "tsc -w",
+    "lint": "tslint --project tsconfig.json",
+    "test": "jest --verbose"
+  },
+  "husky": {
+    "hooks": {
+      "//pre-commit": "npm run lint && npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "author": {
+    "name": "creep",
+    "email": "creep.wei@gmail.com"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.1.8",
+    "husky": "^4.0.10",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.3.0",
+    "tslint": "^5.20.1",
+    "tslint-config-ilemon": "^0.1.5",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "^3.7.5"
+  }
+}
