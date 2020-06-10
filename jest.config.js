@@ -1,7 +1,7 @@
 module.exports = {
   testEnvironment: 'node',
   transform: {
-    '^.+\\.tsx?$': 'ts-jest'
+    '^.+\\.tsx?$': 'ts-jest',
   },
   testMatch: [`${__dirname}/src/**/*.(test|spec).ts`],
   moduleFileExtensions: [
@@ -10,12 +10,12 @@ module.exports = {
     'js',
     'jsx',
     'json',
-    'node'
+    'node',
   ],
   collectCoverage: true,
   coverageReporters: ['json', 'html'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
-    '!**/*.{test, spec}.{ts, tsx}'
-  ]
-}
+    '!**/*.{test, spec}.{ts, tsx}',
+  ],
+};
